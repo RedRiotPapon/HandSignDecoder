@@ -10,21 +10,23 @@ import android.view.MenuItem;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+
+import java.util.ArrayList;
+
 public class home extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-    ViewPager   viewPager;
    // home homeFragment = new home();
     MainActivity signtoletter = new MainActivity();
     frag1 homeFragment = new frag1();
     frag2 signtoword = new frag2();
     frag3 signtospeech = new frag3();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         bottomNavigationView  = findViewById(R.id.bottomNavbar);
-        viewPager = findViewById(R.id.viewpager);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer,homeFragment).commit();
 
