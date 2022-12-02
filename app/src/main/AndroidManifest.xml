@@ -24,7 +24,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SignDecoder">
-
+        <activity
+            android:name=".homeAdapter"
+            android:exported="false" />
         <activity
             android:name=".home"
             android:exported="false" />

@@ -9,13 +9,18 @@
     android:orientation="vertical"
     tools:context=".homeAdapter">
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="70dp"
+        android:layout_height="wrap_content">
 
-        />
+        <ImageView
+            android:layout_width="400dp"
+            android:layout_height="230dp"
+            android:id="@+id/img"
+            android:src="@drawable/a"
 
+
+            />
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
