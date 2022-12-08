@@ -25,6 +25,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SignDecoder">
         <activity
+            android:name=".CombineLettersActivity"
+            android:exported="false" />
+        <activity
             android:name=".homeAdapter"
             android:exported="false" />
         <activity

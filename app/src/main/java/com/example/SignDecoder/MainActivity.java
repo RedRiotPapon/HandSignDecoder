@@ -40,9 +40,6 @@ public class MainActivity extends Fragment {
             }
         });
 
-
-
-
         return view;
     }
 
