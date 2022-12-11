@@ -14,13 +14,38 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/img"
             android:layout_width="400dp"
             android:layout_height="230dp"
-            android:id="@+id/img"
+            android:layout_marginTop="100dp"
             android:src="@drawable/a"
+            android:background="@color/faintred"
 
 
             />
+        <TextView
+            android:id="@+id/placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginTop="350dp"
+
+            android:background="@color/faintblue"
+
+            />
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginRight="150dp"
+            android:background="@drawable/round_btn_bg2"
+            android:text="A"
+            android:textAlignment="center"
+            android:textSize="70sp"
+            />
+
     </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

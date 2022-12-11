@@ -2,7 +2,9 @@ package com.example.SignDecoder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.TaskStackBuilder;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Window;
@@ -13,6 +15,8 @@ import android.widget.TextView;
 public class SpashScreen extends AppCompatActivity {
     private ProgressBar progressBar;
     private int progress;
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +27,8 @@ public class SpashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_spash_screen);
         getSupportActionBar().hide(); //
         progressBar = (ProgressBar) findViewById(R.id.progressBarId);
-
+        preferences = getSharedPreferences("splash",MODE_PRIVATE);
+        editor  = preferences.edit();
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -48,9 +53,23 @@ public class SpashScreen extends AppCompatActivity {
     }
 
     public void startApp() {
-        Intent intent = new Intent(this, home.class);
-        startActivity(intent);
-        finish();
+        if(preferences.getBoolean("issMain", false)){
+            Intent intent = new Intent(this, home.class);
+            startActivity(intent);
+            finish();
+
+        }
+        else{
+            editor.putBoolean("issMain",true);
+            editor.apply();
+
+            TaskStackBuilder.create(SpashScreen.this)
+                    .addNextIntentWithParentStack(new Intent(this, home.class))
+                    .addNextIntent(new Intent(this, IntroActivity.class))
+                    .startActivities();
+
+        }
+
     }
 
 }
