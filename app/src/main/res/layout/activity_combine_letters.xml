@@ -47,6 +47,13 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="58dp"
+            android:id="@+id/text_speech_button"
+            android:text="Read"
+            android:textAllCaps="false"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
             android:id="@+id/clear_button"
             android:text="Clear"
             android:textAllCaps="false"
