@@ -1,6 +1,7 @@
 package com.example.SignDecoder;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +10,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -18,6 +20,7 @@ public class frag1 extends Fragment {
     ViewPager viewPager;
     ArrayList<Integer> arrayList= new ArrayList<>();
     Context thiscontext;
+    Button button;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -26,6 +29,7 @@ public class frag1 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_frag1, container, false);
         viewPager = view.findViewById(R.id.viewpager);
         thiscontext = container.getContext();
+        button =view.findViewById(R.id.testbtn);
         arrayList.add(R.drawable.a);
         arrayList.add(R.drawable.b);
         arrayList.add(R.drawable.c);
@@ -55,6 +59,14 @@ public class frag1 extends Fragment {
 
         homeAdapter homeAdapter = new homeAdapter(thiscontext,arrayList);
         viewPager.setAdapter(homeAdapter);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Quiz activity = (Quiz) getActivity();
+                Intent intent = new Intent(getActivity(),Quiz.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }
