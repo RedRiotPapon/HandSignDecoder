@@ -3,6 +3,7 @@
     package="com.example.SignDecoder">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -25,8 +26,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SignDecoder">
         <activity
+            android:name=".Register"
+            android:exported="false" />
+            
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+            
+        <activity
             android:name=".Quiz"
             android:exported="false" />
+            
         <activity
             android:name=".CombineLettersActivity"
             android:exported="false" />
