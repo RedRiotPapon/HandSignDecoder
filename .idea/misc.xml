@@ -4,10 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/asus/Desktop/HandSignDecoder/app/src/main/res/layout/activity_camera.xml" value="0.24947916666666667" />
-        <entry key="..\:/Users/asus/Desktop/HandSignDecoder/app/src/main/res/layout/activity_combine_letters.xml" value="0.2" />
+        <entry key="..\:/Users/asus/Desktop/HandSignDecoder/app/src/main/res/layout/activity_combine_letters.xml" value="0.1" />
+        <entry key="..\:/Users/asus/Desktop/HandSignDecoder/app/src/main/res/layout/activity_home.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/asus/Desktop/HandSignDecoder/app/src/main/res/layout/activity_home_adapter.xml" value="0.20652173913043478" />
         <entry key="..\:/Users/asus/Desktop/HandSignDecoder/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/asus/Desktop/HandSignDecoder/app/src/main/res/layout/fragment_frag1.xml" value="0.25" />
         <entry key="..\:/Users/asus/Desktop/HandSignDecoder/app/src/main/res/layout/fragment_frag2.xml" value="0.264" />
+        <entry key="..\:/Users/asus/Desktop/HandSignDecoder/app/src/main/res/layout/fragment_frag3.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/asus/Desktop/HandSignDecoder/app/src/main/res/layout/fragment_frag4.xml" value="0.20652173913043478" />
+        <entry key="..\:/Users/asus/Desktop/HandSignDecoder/app/src/main/res/layout/speech_to_speech.xml" value="0.25" />
         <entry key="..\:/Users/asus/Desktop/sign_language/sign_language_recognition_app/app/src/main/res/layout/activity_main.xml" value="0.16983695652173914" />
         <entry key="..\:/Users/itxpa/OneDrive/Desktop/System project/Sign Decoder/HandSignDecoder/app/src/main/res/drawable/onboarding_background.xml" value="0.15" />
         <entry key="..\:/Users/itxpa/OneDrive/Desktop/System project/Sign Decoder/HandSignDecoder/app/src/main/res/drawable/round_btn_bg.xml" value="0.1" />

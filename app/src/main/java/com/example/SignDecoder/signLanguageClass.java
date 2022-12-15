@@ -3,6 +3,7 @@ package com.example.SignDecoder;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
+import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +29,7 @@ import java.nio.ByteOrder;
 import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -59,9 +61,11 @@ public class  signLanguageClass {
     //string that hold currently detecting letter
     private String current_text="";
 
+    private TextToSpeech textToSpeech;
 
 
-    signLanguageClass(Button clear_button, Button add_button, TextView change_text,AssetManager assetManager, String modelPath, String labelPath, int inputSize, String classification_model, int classification_input_size) throws IOException{
+
+    signLanguageClass(CombineLettersActivity context, Button clear_button, Button add_button, TextView change_text, Button text_speech_button, AssetManager assetManager, String modelPath, String labelPath, int inputSize, String classification_model, int classification_input_size) throws IOException{
         INPUT_SIZE=inputSize;
         Classification_Input_Size=classification_input_size;
         // use to define gpu or cpu // no. of threads
@@ -101,8 +105,30 @@ public class  signLanguageClass {
             }
         });
 
+        textToSpeech = new TextToSpeech(context, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status!=TextToSpeech.ERROR){
+                    textToSpeech.setLanguage(Locale.ENGLISH);
+
+                }
+            }
+        });
+
+        text_speech_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //clicking this button the textToSpeech will be read
+
+                textToSpeech.speak(final_text,TextToSpeech.QUEUE_FLUSH,null);
+                
+            }
+        });
 
     }
+
+
+
 
     private List<String> loadLabelList(AssetManager assetManager, String labelPath) throws IOException {
         // to store label
