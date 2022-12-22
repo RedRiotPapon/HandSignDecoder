@@ -12,7 +12,7 @@ import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-public class SpashScreen extends AppCompatActivity {
+public class  SpashScreen extends AppCompatActivity {
     private ProgressBar progressBar;
     private int progress;
     SharedPreferences preferences;
@@ -54,7 +54,7 @@ public class SpashScreen extends AppCompatActivity {
 
     public void startApp() {
         if(preferences.getBoolean("issMain", false)){
-            Intent intent = new Intent(this, home.class);
+            Intent intent = new Intent(this, Login.class);
             startActivity(intent);
             finish();
 
@@ -64,7 +64,7 @@ public class SpashScreen extends AppCompatActivity {
             editor.apply();
 
             TaskStackBuilder.create(SpashScreen.this)
-                    .addNextIntentWithParentStack(new Intent(this, home.class))
+                    .addNextIntentWithParentStack(new Intent(this, Login.class))
                     .addNextIntent(new Intent(this, IntroActivity.class))
                     .startActivities();
 

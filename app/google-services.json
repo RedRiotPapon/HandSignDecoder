@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "16631955179",
+    "project_id": "learnoset-b568d",
+    "storage_bucket": "learnoset-b568d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16631955179:android:de7bef35c4be982c1d08ae",
+        "android_client_info": {
+          "package_name": "com.example.SignDecoder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16631955179-eesu4stnips91gp5qngthm83o8n08pjk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.SignDecoder",
+            "certificate_hash": "1689ad699ee86e24a8336831f4a62c858aa25512"
+          }
+        },
+        {
+          "client_id": "16631955179-d40l2v8t0vr3ncqtvhoklvg7ol6fbtst.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCT6gG6sglNXCOyMTMgWMwZmq0saJ55tfY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16631955179-d40l2v8t0vr3ncqtvhoklvg7ol6fbtst.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
