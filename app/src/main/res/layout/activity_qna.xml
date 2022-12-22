@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/blueish"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".qna">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="#6C9BF8"
+        >
+
+
+    </RelativeLayout>
+    <com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar
+        android:id="@+id/timer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:indeterminate="false"
+        android:maxHeight="12dp"
+        android:minHeight="12dp"
+        android:max="20"
+        app:backgroundColor="#9C27B0"
+        app:isRounded="false"
+        app:progressColor="@color/purple_200" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/question"
+        android:layout_width="385dp"
+        android:layout_gravity="center"
+        android:layout_height="325dp"
+        android:layout_marginTop="10dp"
+        app:shapeAppearanceOverlay="@style/roundcorner2"
+      >
+        <ImageView
+
+            android:id="@+id/questionimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+        <TextView
+            android:id="@+id/qstn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center"
+
+            android:text="Choose the correct answer"
+            android:textColor="@color/grey_font"
+            android:textSize="26sp"
+            android:layout_marginLeft="35dp"
+            />
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/option1"
+        android:layout_width="385dp"
+         android:layout_gravity="center"
+        android:layout_height="50dp"
+        android:layout_marginTop="17dp"
+        app:shapeAppearanceOverlay="@style/roundcorner2"
+        >
+        <TextView
+            android:id="@+id/opt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Option1"
+            android:textColor="@color/grey_font"
+            android:textSize="30sp"
+        />
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/option2"
+        android:layout_width="385dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp"
+        android:layout_marginTop="17dp"
+        app:shapeAppearanceOverlay="@style/roundcorner2">
+        <TextView
+            android:id="@+id/opt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="Option2"
+            android:textColor="@color/grey_font"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            />
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/option3"
+        android:layout_width="385dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp"
+        android:layout_marginTop="17dp"
+        app:shapeAppearanceOverlay="@style/roundcorner2" >
+        <TextView
+            android:id="@+id/opt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="Option3"
+            android:textColor="@color/grey_font"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+<LinearLayout
+    android:layout_width="190dp"
+    android:layout_height="57dp"
+    android:background="@drawable/rectangle"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="110dp"
+    >
+
+    <TextView
+        android:id="@+id/nxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="NEXT"
+        android:textColor="@color/faintblue"
+        android:textSize="40sp"
+        android:layout_marginLeft="40dp"
+        android:fontFamily="@font/cantarell"/>
+</LinearLayout>
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

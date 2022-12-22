@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.SignDecoder">
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -19,6 +20,7 @@
         android:required="false" />
 
     <application
+        tools:replace="android:label"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Sign Decoder"
@@ -37,6 +39,11 @@
             android:name=".Quiz"
             android:exported="false" />
             
+        <activity
+            android:name=".qna"
+            android:exported="false" />
+
+
         <activity
             android:name=".CombineLettersActivity"
             android:exported="false" />

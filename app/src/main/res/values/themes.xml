@@ -22,4 +22,12 @@
     <style name="Theme.SignDecoder.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.SignDecoder.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Dialog">
+        <item name="android:windowBackground">@drawable/empty</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+
+    </style>
 </resources>
