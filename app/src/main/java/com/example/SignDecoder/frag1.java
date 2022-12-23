@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -21,12 +22,19 @@ public class frag1 extends Fragment {
     ArrayList<Integer> arrayList= new ArrayList<>();
     Context thiscontext;
     Button button;
-
+public String str;
+    public String name;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        home activity = (home) getActivity();
+         str = activity.getMyData();
+         name = activity.getMyName();
         View view = inflater.inflate(R.layout.fragment_frag1, container, false);
+        TextView textView = view.findViewById(R.id.name);
+        textView.setText("Welcome "+name);
+        // Inflate the layout for this fragment
+
         viewPager = view.findViewById(R.id.viewpager);
         thiscontext = container.getContext();
         button =view.findViewById(R.id.testbtn);
@@ -64,6 +72,7 @@ public class frag1 extends Fragment {
             public void onClick(View v) {
                 // Quiz activity = (Quiz) getActivity();
                 Intent intent = new Intent(getActivity(),Quiz.class);
+                intent.putExtra("sms", str);
                 startActivity(intent);
             }
         });

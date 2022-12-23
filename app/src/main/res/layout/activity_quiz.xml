@@ -18,8 +18,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.073"
-        app:shapeAppearanceOverlay="@style/roundcorner" />
-
+        app:shapeAppearanceOverlay="@style/roundcorner" >
+<!--        <TextView-->
+<!--            android:id="@+id/lvl"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            />-->
+    </com.google.android.material.card.MaterialCardView>
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/level3"
         android:layout_width="380dp"
