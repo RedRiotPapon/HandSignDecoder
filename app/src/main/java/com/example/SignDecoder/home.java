@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -20,13 +21,19 @@ public class home extends AppCompatActivity {
     frag1 homeFragment = new frag1();
     frag2 signtoword = new frag2();
     frag3 signtospeech = new frag3();
-
+  public  String str;
+  public String name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         bottomNavigationView  = findViewById(R.id.bottomNavbar);
+        Intent i = getIntent();
+        str = i.getStringExtra("sms");
+        name = i.getStringExtra("name");
+
+
 
         getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer,homeFragment).commit();
 
@@ -55,5 +62,11 @@ public class home extends AppCompatActivity {
 
 
 
+    }
+    public String getMyData() {
+        return str;
+    }
+    public String getMyName() {
+        return name;
     }
 }

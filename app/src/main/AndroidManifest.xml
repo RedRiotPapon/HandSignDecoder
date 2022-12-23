@@ -39,6 +39,7 @@
         <activity
             android:name=".Quiz"
             android:exported="false" />
+            
         <activity
             android:name=".qna"
             android:exported="false" />

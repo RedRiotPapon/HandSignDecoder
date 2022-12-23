@@ -30,6 +30,8 @@ public class Login extends AppCompatActivity {
         final EditText password = findViewById(R.id.password);
         final Button loginBtn = findViewById(R.id.loginBtn);
         final TextView registerNowBtn = findViewById(R.id.registerNowBtn);
+//        final String str="";
+
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,12 +52,20 @@ public class Login extends AppCompatActivity {
                                 //now get pass from user and match password
                                 //1st collect pass from DB
                                 final String getPassword = snapshot.child(phoneTxt).child("password").getValue(String.class);
+                                 final String str = snapshot.child(phoneTxt).child("i").getValue(String.class);
+                                final String n = snapshot.child(phoneTxt).child("fullname").getValue(String.class);
+
+
 
                                 //now check with given pass
                                 if(getPassword.equals(passwordTxt)){
                                     Toast.makeText(Login.this,"Successfully Logged IN :D",Toast.LENGTH_SHORT).show();
                                     //open home page
-                                    startActivity(new Intent(Login.this, home.class));
+                                    Intent intent = new Intent(Login.this, home.class);
+                                    intent.putExtra("sms", str);
+                                    intent.putExtra("name", n);
+
+                                    startActivity(intent);
                                     finish();
                                 }
                                 else{
@@ -73,6 +83,9 @@ public class Login extends AppCompatActivity {
                         }
                     });
                 }
+
+
+//                startActivity(intent);
 
             }
         });

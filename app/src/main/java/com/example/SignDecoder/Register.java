@@ -70,6 +70,7 @@ public class Register extends AppCompatActivity {
                                 databaseReference.child("users").child(phoneTxt).child("fullname").setValue(fullnameTxt);
                                 databaseReference.child("users").child(phoneTxt).child("email").setValue(emailTxt);
                                 databaseReference.child("users").child(phoneTxt).child("password").setValue(passwordTxt);
+                                databaseReference.child("users").child(phoneTxt).child("i").setValue("0");
 
                                 Toast.makeText(Register.this,"Registered Successfully",Toast.LENGTH_SHORT).show();
                                 finish();
