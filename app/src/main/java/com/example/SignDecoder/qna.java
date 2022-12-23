@@ -36,26 +36,38 @@ public class qna extends AppCompatActivity {
     int correctcnt = 0;
     int incorrectcnt = 0;
     LinearLayout btnnext ;
+    String name;
+    String str;
 
     public static  String answer;
     RoundedHorizontalProgressBar progressBar;
+    @Override
+    public void onBackPressed () {
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qna);
+        Intent i = getIntent();
+         str = i.getStringExtra("sms");
+         name = i.getStringExtra("name") ;
         getSupportActionBar().hide();
         getId();
 
         Questions = qlist;
-        Collections.shuffle(Questions);
+        //Collections.shuffle(Questions);
         qnaSetter = qlist.get(index);
         setQuestion();
         imageView = findViewById(R.id.exit);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(qna.this, Quiz.class);
+                intent.putExtra("sms", str);
+                intent.putExtra("name",name);
                 startActivity(intent);
             }
         });
@@ -70,8 +82,20 @@ public class qna extends AppCompatActivity {
             public void onFinish() {
                 Dialog dialog = new Dialog(qna.this);
                 dialog.setContentView(R.layout.timeout2);
-                //dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
+             //   dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
+               // LinearLayout tg = findViewById(R.id.tryagain);
+                dialog.findViewById(R.id.tryagain).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                    Intent intent = new Intent(qna.this , Quiz.class);
+                        intent.putExtra("sms", str);
+                        intent.putExtra("name", name);
+                        startActivity(intent);
+
+                    }
+                });
                 dialog.show();
+
             }
         }.start();
     }
@@ -245,6 +269,9 @@ public class qna extends AppCompatActivity {
 Intent intent = new Intent(this,finalPage.class);
 intent.putExtra("correct",correctcnt);
 intent.putExtra("incorrect",incorrectcnt);
+            intent.putExtra("sms", str);
+            intent.putExtra("name", name);
+
 startActivity(intent);
 
     }

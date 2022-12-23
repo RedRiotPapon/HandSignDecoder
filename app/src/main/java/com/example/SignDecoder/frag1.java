@@ -73,6 +73,7 @@ public String str;
                 // Quiz activity = (Quiz) getActivity();
                 Intent intent = new Intent(getActivity(),Quiz.class);
                 intent.putExtra("sms", str);
+                intent.putExtra("name",name);
                 startActivity(intent);
             }
         });
