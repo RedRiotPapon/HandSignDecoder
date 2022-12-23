@@ -4,7 +4,7 @@
     package="com.example.SignDecoder">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -20,29 +20,28 @@
         android:required="false" />
 
     <application
-        tools:replace="android:label"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Sign Decoder"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SignDecoder">
+        android:theme="@style/Theme.SignDecoder"
+        tools:replace="android:label">
+        <activity
+            android:name=".finalPage"
+            android:exported="false" />
         <activity
             android:name=".Register"
             android:exported="false" />
-            
         <activity
             android:name=".Login"
             android:exported="false" />
-            
         <activity
             android:name=".Quiz"
             android:exported="false" />
         <activity
             android:name=".qna"
             android:exported="false" />
-
-
         <activity
             android:name=".CombineLettersActivity"
             android:exported="false" />

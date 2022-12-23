@@ -19,12 +19,11 @@ public static ArrayList<qnaSetter>qlist;
         setContentView(R.layout.activity_quiz);
         cardView = findViewById(R.id.level1);
         qlist = new ArrayList<>();
-        qlist.add(new qnaSetter("A","B","C","a"));
-        qlist.add(new qnaSetter("H","E","F","f"));
-        qlist.add(new qnaSetter("I","J","K","i"));
-        qlist.add(new qnaSetter("B","X","Z","z"));
-        qlist.add(new qnaSetter("C","O","P","o"));
-        qlist.add(new qnaSetter("A","B","C","a"));
+        qlist.add(new qnaSetter("a","b","c","a"));
+        qlist.add(new qnaSetter("h","e","f","f"));
+        qlist.add(new qnaSetter("i","j","k","i"));
+        qlist.add(new qnaSetter("b","x","z","z"));
+        qlist.add(new qnaSetter("c","o","p","o"));
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
