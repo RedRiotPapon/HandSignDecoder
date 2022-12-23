@@ -32,16 +32,21 @@ public static ArrayList<qnaSetter>qlist;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
         cardView = findViewById(R.id.level1);
+        cardView2 = findViewById(R.id.level2);
+        cardView3 = findViewById(R.id.level3);
         qlist = new ArrayList<>();
+
+
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            
         qlist.add(new qnaSetter("a","b","c","a"));
         qlist.add(new qnaSetter("h","e","f","f"));
         qlist.add(new qnaSetter("i","j","k","i"));
         qlist.add(new qnaSetter("b","x","z","z"));
         qlist.add(new qnaSetter("c","o","p","o"));
-
-        cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            
                 Intent intent = new Intent(Quiz.this,qna.class);
                 startActivity(intent);
             }
@@ -54,13 +59,8 @@ public static ArrayList<qnaSetter>qlist;
 //        obj.setText(str);
 
 
-        cardView2 = findViewById(R.id.level2);
-        qlist = new ArrayList<>();
-        qlist.add(new qnaSetter("dog","jug","pet","dog"));
-        qlist.add(new qnaSetter("mse","cse","ece","cse"));
-        qlist.add(new qnaSetter("rat","act","ant","ant"));
-        qlist.add(new qnaSetter("joy","ace","toy","joy"));
-        qlist.add(new qnaSetter("sir","car","bar","sir"));
+        
+
 
 
         if(str.equals("1"))
@@ -68,6 +68,13 @@ public static ArrayList<qnaSetter>qlist;
             cardView2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+        qlist.add(new qnaSetter("dog","jug","pet","dog"));
+        qlist.add(new qnaSetter("mse","cse","ece","cse"));
+        qlist.add(new qnaSetter("rat","act","ant","ant"));
+        qlist.add(new qnaSetter("joy","ace","toy","joy"));
+        qlist.add(new qnaSetter("sir","car","bar","sir"));
+                
+                
                     Intent intent = new Intent(Quiz.this,qna.class);
                     startActivity(intent);
                 }
@@ -75,13 +82,7 @@ public static ArrayList<qnaSetter>qlist;
         }
 
 
-        cardView3 = findViewById(R.id.level3);
-        qlist = new ArrayList<>();
-        qlist.add(new qnaSetter("kuet","ruet","buet","kuet"));
-        qlist.add(new qnaSetter("move","love","dove","love"));
-        qlist.add(new qnaSetter("cgpa","back","base","cgpa"));
-        qlist.add(new qnaSetter("best","rest","test","best"));
-        qlist.add(new qnaSetter("busy","life","type","life"));
+
 
 
         if(str.equals("2"))
@@ -89,6 +90,14 @@ public static ArrayList<qnaSetter>qlist;
             cardView3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                       
+        qlist.add(new qnaSetter("kuet","ruet","buet","kuet"));
+        qlist.add(new qnaSetter("move","love","dove","love"));
+        qlist.add(new qnaSetter("cgpa","back","base","cgpa"));
+        qlist.add(new qnaSetter("best","rest","test","best"));
+        qlist.add(new qnaSetter("busy","life","type","life"));
+                
+                
                     Intent intent = new Intent(Quiz.this,qna.class);
                     startActivity(intent);
                 }

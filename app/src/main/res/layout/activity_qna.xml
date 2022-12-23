@@ -13,7 +13,14 @@
         android:layout_height="63dp"
         android:background="#6C9BF8"
         >
-
+<ImageView
+    android:id="@+id/exit"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:background="@drawable/exit"
+    android:layout_marginLeft="330dp"
+    android:layout_marginTop="5dp"
+    />
 
     </RelativeLayout>
     <com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar
@@ -65,9 +72,11 @@
         app:shapeAppearanceOverlay="@style/roundcorner2"
         >
         <TextView
+            android:textAllCaps="true"
+            android:onClick="opton1Click"
             android:id="@+id/opt1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:textAlignment="center"
             android:gravity="center"
             android:layout_gravity="center"
@@ -83,17 +92,19 @@
         android:layout_height="50dp"
         android:layout_marginTop="17dp"
         app:shapeAppearanceOverlay="@style/roundcorner2">
+
         <TextView
             android:id="@+id/opt2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:text="Option2"
-            android:textColor="@color/grey_font"
-            android:textSize="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            />
+            android:gravity="center"
+            android:onClick="opton2Click"
+            android:text="Option2"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/grey_font"
+            android:textSize="30sp" />
     </com.google.android.material.card.MaterialCardView>
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/option3"
@@ -103,9 +114,11 @@
         android:layout_marginTop="17dp"
         app:shapeAppearanceOverlay="@style/roundcorner2" >
         <TextView
+            android:onClick="opton3Click"
+            android:textAllCaps="true"
             android:id="@+id/opt3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:textAlignment="center"
             android:gravity="center"
             android:text="Option3"
@@ -116,6 +129,7 @@
     </com.google.android.material.card.MaterialCardView>
 
 <LinearLayout
+    android:id="@+id/nxt"
     android:layout_width="190dp"
     android:layout_height="57dp"
     android:background="@drawable/rectangle"
@@ -124,7 +138,7 @@
     >
 
     <TextView
-        android:id="@+id/nxt"
+        android:id="@+id/nxtxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
