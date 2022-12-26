@@ -42,6 +42,7 @@
         android:layout_height="325dp"
         android:layout_marginTop="10dp"
         app:shapeAppearanceOverlay="@style/roundcorner2"
+        app:cardElevation="8dp"
       >
         <ImageView
 
@@ -56,9 +57,10 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:gravity="center"
-
+            android:layout_marginTop="290dp"
+            android:background="@drawable/round_btn_bg2"
             android:text="Choose the correct answer"
-            android:textColor="@color/grey_font"
+            android:textColor="#2C4A77"
             android:textSize="26sp"
             android:layout_marginLeft="35dp"
             />
@@ -70,6 +72,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="17dp"
         app:shapeAppearanceOverlay="@style/roundcorner2"
+        app:cardElevation="8dp"
         >
         <TextView
             android:textAllCaps="true"
@@ -91,6 +94,7 @@
         android:layout_gravity="center"
         android:layout_height="50dp"
         android:layout_marginTop="17dp"
+        app:cardElevation="8dp"
         app:shapeAppearanceOverlay="@style/roundcorner2">
 
         <TextView
@@ -112,6 +116,7 @@
         android:layout_gravity="center"
         android:layout_height="50dp"
         android:layout_marginTop="17dp"
+        app:cardElevation="8dp"
         app:shapeAppearanceOverlay="@style/roundcorner2" >
         <TextView
             android:onClick="opton3Click"
@@ -135,6 +140,7 @@
     android:background="@drawable/rectangle"
     android:layout_marginTop="15dp"
     android:layout_marginLeft="110dp"
+
     >
 
     <TextView

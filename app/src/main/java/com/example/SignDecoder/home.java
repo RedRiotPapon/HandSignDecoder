@@ -7,7 +7,6 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -51,9 +50,7 @@ public class home extends AppCompatActivity {
                     case R.id.word:
                         getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer,signtoword).commit();
                         return true;
-                    case R.id.voice:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.FragmentContainer,signtospeech).commit();
-                        return true;
+
                 }
 
                 return false;

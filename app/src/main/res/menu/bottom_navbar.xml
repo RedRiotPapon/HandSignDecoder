@@ -12,9 +12,5 @@
         android:id="@+id/word"
         android:icon="@drawable/ic_baseline_message_24"
         android:title="@string/signtoword" />
-    <item
-        android:id="@+id/voice"
-        android:icon="@drawable/ic_baseline_surround_sound_24"
-        android:title="@string/signtovoice" />
 
 </menu>

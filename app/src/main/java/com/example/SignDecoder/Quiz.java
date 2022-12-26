@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -33,8 +34,17 @@ public class Quiz extends AppCompatActivity {
     ImageView tick1,tick2,tick3,lock1,lock2,lock3;
     CircularProgressBar progressBar;
     CountDownTimer countDownTimer;
-    int timerval = 0;
 public static ArrayList<qnaSetter>qlist;
+
+public void progAnimator (float timerval)
+{
+
+    ProgressBarAnimation anim = new ProgressBarAnimation(progressBar, 0, timerval);
+    anim.setDuration(2500);
+    progressBar.startAnimation(anim);
+
+}
+
 
     public void onBackPressed () {
             Intent intent = new Intent(Quiz.this,home.class);
@@ -44,13 +54,19 @@ public static ArrayList<qnaSetter>qlist;
     }
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
         progressBar = findViewById(R.id.circularProgressBar);
+
         prgress = findViewById(R.id.prgress);
+
+
+
+
         cardView = findViewById(R.id.level1);
         cardView2 = findViewById(R.id.level2);
         tick1 = findViewById(R.id.tick1);
@@ -66,8 +82,10 @@ public static ArrayList<qnaSetter>qlist;
          name = i.getStringExtra("name") ;
         switch (str) {
             case "0":
-                progressBar.setProgress(0);
-                prgress.setText("0 %");
+//                progressBar.setProgress(0);
+              prgress.setText("0 %");
+progAnimator(0);
+
                 tick1.setImageResource(R.drawable.cross);
                 tick2.setImageResource(R.drawable.cross);
                 tick3.setImageResource(R.drawable.cross);
@@ -75,7 +93,7 @@ public static ArrayList<qnaSetter>qlist;
                 lock3.setImageResource(R.drawable.lock);
                 break;
             case "1":
-                progressBar.setProgress(33);
+                progAnimator(33);
                 prgress.setText("33 %");
                 tick1.setImageResource(R.drawable.tick);
                 tick2.setImageResource(R.drawable.cross);
@@ -85,6 +103,7 @@ public static ArrayList<qnaSetter>qlist;
 
                 break;
             case "2":
+                progAnimator(67);
                 progressBar.setProgress(67);
                 prgress.setText("67 %");
                 tick1.setImageResource(R.drawable.tick);
@@ -94,7 +113,7 @@ public static ArrayList<qnaSetter>qlist;
                 lock3.setImageResource(R.drawable.unlockpadlock);
                 break;
             default:
-                progressBar.setProgress(100);
+                progAnimator(100);
                 prgress.setText("100 %");
                 tick1.setImageResource(R.drawable.tick);
                 tick2.setImageResource(R.drawable.tick);

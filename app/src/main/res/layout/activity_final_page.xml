@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".finalPage"
-    android:background="@color/blueish"
+    android:background="#B0D0F6"
 
     >
 
@@ -13,7 +13,7 @@
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="63dp"
-        android:background="#6C9BF8"
+        android:background="#7AA6FB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -34,12 +34,12 @@
         android:id="@+id/circularProgressBar"
         android:layout_width="331dp"
         android:layout_height="295dp"
-        app:cpb_background_progressbar_color="#3F51B5"
+        app:cpb_background_progressbar_color="#F4665C"
         app:cpb_background_progressbar_width="20dp"
         app:cpb_progress="4"
         app:cpb_progress_direction="to_right"
         app:cpb_progress_max="5"
-        app:cpb_progressbar_color="#2196F3"
+        app:cpb_progressbar_color="#5167DF"
         app:cpb_progressbar_width="33dp"
         app:cpb_round_border="false"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -77,15 +77,15 @@
         app:layout_constraintVertical_bias="0.248" />
 
     <ImageView
-        android:layout_width="77dp"
-        android:layout_height="105dp"
+        android:layout_width="66dp"
+        android:layout_height="74dp"
         android:background="@drawable/tick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.769" />
+        app:layout_constraintVertical_bias="0.751" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

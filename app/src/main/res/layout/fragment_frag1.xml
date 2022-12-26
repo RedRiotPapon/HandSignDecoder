@@ -7,37 +7,80 @@
     android:foregroundTint="#2196F3"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".homeAdapter">
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/testbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/blueish"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="530dp"
-        android:text="Evaluate"
-        android:textAllCaps="false"
-        android:textColor="@color/grey_font"
+    tools:context=".homeAdapter"
+    >
 
-        />
-    <TextView
-        android:layout_marginTop="20dp"
-        android:id="@+id/name"
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/level1"
+        android:layout_width="383dp"
+        android:layout_height="147dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="507dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/material_dynamic_primary20"
+        app:cardElevation="09dp"
+        app:shapeAppearanceOverlay="@style/roundcorner">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/testbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/round_btn"
+            android:elevation="10dp"
+            android:text="Evaluate"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text=""
-        android:textSize="32sp"
-        />
-    <ImageView
+        android:layout_height="60dp"
+        app:cardElevation="9dp"
+        >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="329dp"
+            android:layout_height="37dp"
+  android:layout_marginLeft="25dp"
+            android:layout_marginBottom="5dp"
+            android:text="dsfdfds"
+            android:textSize="32sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.qhutch.elevationimageview.ElevationImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="322dp"
-
-
-        android:layout_marginTop="294dp"
+        android:layout_width="387dp"
+        android:layout_height="180dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="314dp"
         android:layout_marginBottom="32dp"
-        android:src="@drawable/ellipse11" />
+        android:elevation="29dp"
+        android:src="@drawable/materialcard1"
+        app:clipShadow="true"
 
+
+
+        />
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        android:id="@+id/levelbg"-->
+<!--        android:layout_width="387dp"-->
+<!--        android:layout_height="189dp"-->
+<!--        android:layout_marginLeft="13dp"-->
+<!--        android:layout_marginTop="294dp"-->
+<!--        android:layout_marginBottom="32dp"-->
+<!--        android:elevation="8dp"-->
+<!--        app:cardBackgroundColor="@color/blueish"-->
+<!--        app:cardUseCompatPadding="true"-->
+<!--        app:shapeAppearanceOverlay="@style/roundcorner" />-->
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
@@ -45,6 +88,5 @@
         android:layout_marginBottom="20dp"
 
         />
-
 
 </RelativeLayout>
