@@ -22,6 +22,15 @@ public class finalPage extends AppCompatActivity {
     CircularProgressBar progressBar;
     ImageView imageView;
     int total ;
+    public void progAnimator (float timerval)
+    {
+
+        ProgressBarAnimation anim = new ProgressBarAnimation(progressBar, 0, timerval);
+        anim.setDuration(1000);
+        progressBar.startAnimation(anim);
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +41,8 @@ public class finalPage extends AppCompatActivity {
         str = i.getStringExtra("sms");
         name = i.getStringExtra("name") ;
        progressBar = findViewById(R.id.circularProgressBar);
-       progressBar.setProgress(correct);
+       progAnimator(correct);
+      // progressBar.setProgress(correct);
        text1 = findViewById(R.id.scoreC);
         total = correct+incorrect;
        text1.setText(correct+"/"+total);

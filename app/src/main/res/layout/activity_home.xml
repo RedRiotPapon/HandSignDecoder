@@ -7,22 +7,22 @@
     android:foregroundTint="#2196F3"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:background="@color/blueish"
+    android:background="#FFFFFF"
     tools:context=".home">
-
 
 
     <FrameLayout
         android:id="@+id/FragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottomNavbar" />
+        android:layout_above="@id/bottomNavbar">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottomNavbar"
-        android:textSize="50sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle"
+            android:textSize="50sp" />
+    </FrameLayout>
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -30,8 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_navbar"
-        android:background="@color/blueish"
-        />
+        android:background="#FFFFFF"
+        app:menu="@menu/bottom_navbar" />
 
 </RelativeLayout>
