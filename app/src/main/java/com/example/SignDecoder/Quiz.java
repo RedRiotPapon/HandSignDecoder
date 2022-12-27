@@ -112,9 +112,20 @@ progAnimator(0);
                 lock2.setImageResource(R.drawable.unlockpadlock);
                 lock3.setImageResource(R.drawable.unlockpadlock);
                 break;
+            case "3":
+                progAnimator(100);
+                prgress.setText("100%");
+                tick1.setImageResource(R.drawable.tick);
+                tick2.setImageResource(R.drawable.tick);
+                tick3.setImageResource(R.drawable.tick);
+
+                lock1.setImageResource(R.drawable.unlockpadlock);
+                lock2.setImageResource(R.drawable.unlockpadlock);
+                lock3.setImageResource(R.drawable.unlockpadlock);
+                break;
             default:
                 progAnimator(100);
-                prgress.setText("100 %");
+                prgress.setText("100%");
                 tick1.setImageResource(R.drawable.tick);
                 tick2.setImageResource(R.drawable.tick);
                 tick3.setImageResource(R.drawable.tick);
@@ -164,7 +175,7 @@ progAnimator(0);
 
 
 
-        if(str.equals("1") || str.equals("2"))
+        if(str.equals("1") || str.equals("2") || str.equals("3"))
         {
             cardView2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -188,7 +199,7 @@ progAnimator(0);
 
 
 
-        if(str.equals("2") )
+        if(str.equals("2") || str.equals("3")  )
         {
             cardView3.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -340,7 +340,7 @@ public class  objectDetectorClass {
             byteBuffer=ByteBuffer.allocateDirect(4*1*size_images*size_images*3);
         }
         byteBuffer.order(ByteOrder.nativeOrder());
-        int[] intValues=new int[size_images*size_images];
+        int[] intValues=new int[size_images*size_images]; //pixel values stored
         bitmap.getPixels(intValues,0,bitmap.getWidth(),0,0,bitmap.getWidth(),bitmap.getHeight());
         int pixel=0;
 
@@ -364,6 +364,7 @@ public class  objectDetectorClass {
         }
     return byteBuffer;
     }
+    //Bytebuffer now contains the R,G,B values of the pixels
 
     //crate a copy of convertBitmapToByteBuffer
     //add 1

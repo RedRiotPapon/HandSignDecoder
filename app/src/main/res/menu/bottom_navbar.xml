@@ -6,11 +6,11 @@
     android:title="@string/home" />
     <item
         android:id="@+id/letter"
-        android:icon="@drawable/ic_baseline_perm_camera_mic_24"
+        android:icon="@drawable/ic_baseline_message_24"
         android:title="@string/signtoletter" />
     <item
         android:id="@+id/word"
-        android:icon="@drawable/ic_baseline_message_24"
+        android:icon="@drawable/ic_baseline_perm_camera_mic_24"
         android:title="@string/signtoword" />
 
 </menu>
