@@ -13,6 +13,16 @@
         android:layout_height="63dp"
         android:background="#6C9BF8"
         >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/monoton"
+            android:text="Quiz"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
 <ImageView
     android:id="@+id/exit"
     android:layout_width="50dp"
@@ -58,11 +68,11 @@
             android:textAlignment="center"
             android:gravity="center"
             android:layout_marginTop="290dp"
-            android:background="@drawable/round_btn_bg2"
+
             android:text="Choose the correct answer"
             android:textColor="#2C4A77"
-            android:textSize="26sp"
-            android:layout_marginLeft="35dp"
+            android:textSize="22sp"
+            android:layout_marginLeft="70dp"
             />
     </com.google.android.material.card.MaterialCardView>
     <com.google.android.material.card.MaterialCardView
