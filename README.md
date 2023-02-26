@@ -27,6 +27,10 @@ This app will let users:
 ## SystemProjectReport
 [SystemProjectReport.docx](https://github.com/RedRiotPapon/HandSignDecoder/files/10834217/SystemProjectReport.docx)
 
+##Presentation
+[1807066_1807089.pptx](https://github.com/RedRiotPapon/HandSignDecoder/files/10834221/1807066_1807089.pptx)
+
+
 ## Contributors
 1. [Argho Deb Das'1807066](https://github.com/MrArgho)
 2. [Md Hefzul Hossain Papon '1807089](https://github.com/RedRiotPapon)
