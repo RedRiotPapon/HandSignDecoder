@@ -12,16 +12,16 @@ This app will let users:
 * To learn the Sign Language of Alphabets from Tutoral.
 * To Test own progress in real time using camera.
 
-##UML Diagram
+## UML Diagram
 ![er1 (1)](https://user-images.githubusercontent.com/103327602/221424162-1ae983d5-c000-4a17-abed-fc864e91219a.png)
 
-##Dataset
+## Dataset
 ![image](https://user-images.githubusercontent.com/103327602/221424326-e440c958-8da6-4e69-b042-6f3cc4da95e3.png)
 
-##Graphical representation of R2 score of model
+## Graphical representation of R2 score of model
 ![image](https://user-images.githubusercontent.com/103327602/221424435-dbf310a2-dc14-44a2-82eb-73723ba0e607.png)
 
-##Graphical representation of Mean Absolute Error of model
+## Graphical representation of Mean Absolute Error of model
 ![image](https://user-images.githubusercontent.com/103327602/221424537-350470d4-3f74-4efa-a326-88821d7379f4.png)
 
 ## Contributors
