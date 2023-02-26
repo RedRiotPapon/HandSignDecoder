@@ -24,6 +24,9 @@ This app will let users:
 ## Graphical representation of Mean Absolute Error of model
 ![image](https://user-images.githubusercontent.com/103327602/221424537-350470d4-3f74-4efa-a326-88821d7379f4.png)
 
+## SystemProjectReport
+[SystemProjectReport.docx](https://github.com/RedRiotPapon/HandSignDecoder/files/10834217/SystemProjectReport.docx)
+
 ## Contributors
 1. [Argho Deb Das'1807066](https://github.com/MrArgho)
 2. [Md Hefzul Hossain Papon '1807089](https://github.com/RedRiotPapon)
